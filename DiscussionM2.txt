@@ -1,0 +1,70 @@
+*** GitLab Merge Request ***
+
+GitLab
+	- Source Code Management (SCM)
+		- it manages the source code like also GutHub and Gitee, sourceforge, bitBucket
+Cloning 
+	- creates a copy of the code based to your dir/folder but this is still connected to the original repo
+
+	- Difference between downloaded and cloned
+		- downloaded will be not connected to the codebase BUT cloning can compare the difference to the orignal repo
+		There is no copy in the local machine
+Pulling
+	- from cloud to local
+		- there is a local copy in the machine and we just need the updates
+
+
+SDLC
+	- Software Development LifeCycle
+		- Planning
+		- Designing
+		- Development
+		- Testing
+		- Deployment
+			- The deployment stage has three main stages within that ensure proper flow and testing happens before the deployment
+				Three Main Stages:
+					- development
+						- where all the code production happens
+							- code production
+					- quality assurance
+						- where all the testing is done for quality of codes
+					- production
+						- where the final deplyable version product is kept
+			- each of these state or branches are important in making sure that the production code is not tampered with any unnecessary changes that could disrupt operations
+Branching and Merging
+	- Differebt stage can be done using git's branching and merging functionalities
+
+Branch Creation
+	- git branch
+		- command used to create branches
+		- git branch <name-of-branch>
+
+Moving between branches
+	- git checkout
+		- command used to move from one branch to another
+Merging Branches
+	- git checkout <target branch>
+	- git merge <source-branch>
+1. Go to dev branch and create a file call sample_merge.
+	- git checkout dev
+	- touch sample_merge
+		- create file from the text editor
+2. Add the sample_merge file to the commit history of dev branch
+	- git add .
+	- git commit -m "
+	Add sample)merge file"
+3. The sample_merge from dev branch will be merged to the staging branch
+	- git checkout staging
+	- git merge dev
+Mini-Activity
+Given the s01-portfolio project, do the following:
+	1. In the dev branch create a footer file and commit a change
+	2. Merge the new component of file made in dev branch to staging branch
+	3. Push all changes using git push origin --all command.
+
+If git push origin --all don't work:
+	- use git push --force --all
+
+Instructions for SSH Key:
+1. create an SSH Key:
+	- ssh-keygen -t ed25519						
